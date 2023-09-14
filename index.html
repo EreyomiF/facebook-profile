@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'><link rel="stylesheet" href="./style.css">
+    
+    <title>Profile with Cover Photo</title>
+    <style>
+        .profile-cover {
+            width: 100%;
+            height: 200px;
+            background-image: url('./images/WhatsApp\ Image\ 2023-09-11\ at\ 1.24.27\ PM.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+        }
+
+        .profile-pic-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            position: relative;
+            margin-top: -110px;
+            z-index: 1;
+            overflow: visible; /* Allow content to overflow */
+
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: solid blue;
+
+        }
+
+        .additional-img {
+            width: 25px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            border-radius: 50%;
+            height: 25px;
+            background-color: #f7f4f4;
+            border: solid #070707;
+        }
+
+        .card {
+            max-width: 30rem;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Increase the minimum height to ensure all content is visible */
+}
+
+
+        .vertical-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Reduce the space between buttons */
+        .btn-group {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Adjust button styling */
+        .btn {
+            white-space: nowrap;
+            margin: 0 5px;
+        }
+
+        /* Media query for smaller screens (max-width: 320px) */
+        @media (max-width: 320px) {
+            .card {
+                max-width: 100%;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                margin: 5px 0;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 320px) {
+        .d-flex.flex-column.align-items-start {
+            max-width: 100%;
+        }
+    }
+
+/* Media query for smaller screens (max-width: 320px) */
+@media (max-width: 320px) {
+    .card-text {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-transparent">
+            <div class="container-fluid">
+              <a class="navbar-brand"><strong>Facebook</strong></a>
+              <form class="d-flex" role="search">
+                <img src="./images/search.svg" class="" width="20px" style="margin-right: 2px;">
+                <button type="button" class="btn btn-secondary position-relative" style="background-color: transparent; border: transparent;">
+                    <img src="./images/messenger.svg" alt="Image" width="20px" style="margin-top: -13px;"> <!-- Replace 'your-image-url.png' with your image URL -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="margin-top:-1px; margin-left:-5px;">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+                 </form>
+            </div>
+          </nav>
+    </header>
+    <div class="container center-container" >
+        <div class="card mt-2">
+            <div class="profile-cover ">
+            </div>
+            <div class="card-content-container">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="profile-pic-container">
+                    <img src="./images/WhatsApp Image 2023-09-11 at 1.24.27 PM (1).jpeg" class="profile-pic" alt="Profile Picture">
+                    <img src="./images/camera-fill.svg" class="additional-img" alt="Additional Image" >
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title"><strong>Ereyomi Perosolami</strong></h5>
+                <p>Hello there 👋, i'm a Website Developer</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary d-flex align-items-center justify-content-center" style="border-radius: 5px;">
+                        <span>
+                            <img src="./images/facebook plus.png" style="width: 15px; height: 15px; margin-right: 5px; " alt="Icon">
+                            Add to story
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-secondary d-flex align-items-center justify-content-center" style="border-radius: 5px;" >
+                        <span>
+                            <img src="./images/pencil.svg" style="width: 15px; height: 15px; margin-right: 5px;" alt="Icon">
+                            Edit profile
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-secondary d-flex align-items-center justify-content-center" style="border-radius: 5px;">
+                        <span>
+                            ...
+                        </span>
+                    </button>
+                </div>
+                <div class="d-flex flex-column align-items-start mt-0">
+                    <div class="d-flex align-items-center mt-2">
+                        <img src="./images/briefcase.svg" style="width: 20px; height: 20px;" alt="Logo">
+                    <span style="margin-left: 10px; white-space: nowrap;">Works at Self-Employed</span>
+                </div>            
+                <div class="d-flex align-items-center mt-2">
+                    <img src="./images/geo-alt-fill.svg" style="width: 20px; height: 20px;" alt="Logo">
+                    <span style="margin-left: 10px;white-space: nowrap;">From Lagos, Nigeria</span>
+                </div>            
+                <div class="d-flex align-items-center mt-2">
+                    <img src="./images/clock-fill.svg" style="width: 20px; height: 20px;" alt="Logo">
+                    <span style="margin-left: 10px;white-space: nowrap;">Joined July 2011</span>
+                </div>            
+                <div class="d-flex align-items-center mt-2">
+                    <img src="./images/three-dots.svg " style="width: 20px; height: 20px;" alt="Logo">
+                    <span  style="margin-left: 10px;white-space: nowrap;">See Your About Info </span>
+                </div>  
+                <div class="d-flex align-items-center mt-2" >
+                    <img src="./images/discord.svg" style="  margin-right: 5px; ">
+                    <img src="./images/linkedin.svg" style="  margin-right: 5px; ">
+                    <img src="./images/facebook.svg" style="  margin-right: 5px; ">
+                    <img src="./images/github.svg" style="  margin-right: 5px; ">
+                    <img src="./images/instagram.svg" style="  margin-right: 5px; ">           
+                </div>  
+                </div> 
+                <div class="bd-example mt-2 border-0">
+                    <button type="button" class="btn btn-primary custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🥘 Cooking</button>
+                    <button type="button" class="btn btn-secondary custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🌍 Travelling</button>
+                    <button type="button" class="btn btn-success custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🍕 Eating</button>
+                    <button type="button" class="btn btn-danger custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🧘‍♀️ Meditating</button>
+                    <button type="button" class="btn btn-warning custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">💃🏻 Dance</button>
+                    <button type="button" class="btn btn-info custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">👩‍💻 Coding</button>
+                    <button type="button" class="btn btn-light custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🏋️‍♀️ Work-Out</button>
+                    <button type="button" class="btn btn-dark custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🎙️ Music</button>
+                    <button type="button" class="btn btn-primary custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">📖 Reading</button>
+                    <button type="button" class="btn btn-secondary custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">⛹️‍♀️ Sport</button>    
+                    <button type="button" class="btn btn-success custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">☕ Coffee</button>
+                    <button type="button" class="btn btn-warning custom-rounded align-items-center justify-content-center mb-2" style="border-radius: 20px; min-width: 80px; padding: 5px; font-size: 12px;">🚗 Driving</button>
+                </div>
+                            
+                <div class="mt-3">
+                    <a href="#" class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
+                        Edit public details 
+                    </a>
+              </div>
+            <div class="container">
+            <section class="game-section container">
+                <h2 class="line-title" style="max-width: 100%; margin-top: -20px;">Favorite Games </h2>
+                <div class="owl-carousel custom-carousel owl-theme">
+                  <div class="item active" style="background-image: url(https://ucarecdn.com/75d7700d-c102-40ff-9ba1-f0641444c616/dota2.jpg);">
+                    <div class="item-desc">
+                      <h3>Dota 2</h3>
+                      <p>Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                        Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                  <div class="item" style="background-image: url(https://ucarecdn.com/2a5f69bc-befa-49f4-acc6-ab1dcae514c7/winter3.jpg);">
+                    <div class="item-desc">
+                      <h3>The Witcher 3</h3>
+                      <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense
+                        of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                  <div class="item" style="background-image: url(https://ucarecdn.com/ec1918b1-2674-452c-bf61-8f73d8cc40c6/rdr2.jpg);">
+                    <div class="item-desc">
+                      <h3>RDR 2</h3>
+                      <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                        Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                  <div class="item" style="background-image: url(https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg);">
+                    <div class="item-desc">
+                      <h3>PUBG Mobile</h3>
+                      <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                        Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                  <div class="item" style="background-image: url(https://ucarecdn.com/77598be3-c67f-40de-83d3-71a0f2f76c56/fortnite.jpg);">
+                    <div class="item-desc">
+                      <h3>Fortnite</h3>
+                      <p>Battle royale where 100 players fight to be the last person standing. which was a community-created mod
+                        for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                  <div class="item" style="background-image: url(https://ucarecdn.com/ed548880-32e4-42af-9d4e-632623903256/farcry5.jpg);">
+                    <div class="item-desc">
+                      <h3>Far Cry 5</h3>
+                      <p>Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft.
+                        which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </section>
+              <div class="">       
+                <a href="#" class="btn btn-primary w-100 d-flex align-items-center justify-content-center" style="margin-top: -10px;">
+                    See more ....
+                </a>
+              </div>
+            </div>
+            <div class="container-fluid ">
+            <div class="container-10">
+                <h2 class="post-title">Post </h2>
+                <a href="#" class="filter" style="color: rgb(9, 9, 239);">Filter</a>
+            </div>
+            <div class="d-flex flex-column align-items-start mt-0">
+                <div class="d-flex align-items-center mt-2">
+                    <img src="./images/WhatsApp Image 2023-09-11 at 1.24.27 PM (1).jpeg" style="width: 30px; height: 30px; border-radius: 50%;" alt="Logo">
+                <span style="margin-left: 10px; white-space: nowrap;"><input type="text" class="form-control no-border input" placeholder="Whats on your mind?">
+                </span>
+            </div> 
+        </div>
+        <hr>
+        <div class="text-center">
+            <a href="#" class="btn btn-secondary d-flex justify-content-center align-items-center">
+                <img src="./images/chat-text.svg" alt="Chat Icon">
+                <span class="ml-2">Manage Posts</span>
+            </a>
+        </div>
+        <div class="container">
+            <div class="bd-example btn-group mb-2 mt-3 border-0 rounded justify-content-left">
+                <style>
+                    .btn-group .btn {
+                        margin-right: 5px; /* Add margin-right for spacing */
+                    }
+                </style>
+                <button type="button" class="btn btn-secondary custom-rounded align-items-center justify-content-center mb-2 text-center" style="border-radius: 20px; min-width: 80px; padding: 3px; font-size: 12px;">
+                    <img src="./images/images.svg" style="width: 15px; height: 15px; margin-right: 5px;" alt="Icon">
+                    Photos
+                </button>
+                <button type="button" class="btn btn-secondary custom-rounded align-items-center justify-content-center mb-2 text-center" style="border-radius: 20px; min-width: 80px; padding: 3px; font-size: 12px;">
+                    <img src="./images/browser-firefox.svg" style="width: 15px; height: 15px; margin-right: 5px;" alt="Icon">
+                    Avatar
+                </button>
+                <button type="button" class="btn btn-secondary custom-rounded align-items-center justify-content-center mb-2 text-center" style="border-radius: 20px; min-width: 80px; padding: 3px; font-size: 12px;">
+                    <img src="./images/music-note-beamed.svg" style="width: 15px; height: 15px; margin-right: 5px;" alt="Icon">
+                    Music
+                </button>
+            </div>
+        </div>
+                                              </div>
+    </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script><script  src="./script.js"></script>
+    
+</body>
+</html>
